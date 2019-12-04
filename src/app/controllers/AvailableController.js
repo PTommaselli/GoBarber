@@ -46,7 +46,7 @@ class AvailableController {
       '19:00',
     ];
 
-    const available = schedule.map(time => {
+    const available = schedule.mpap(time => {
       const [hour, minute] = time.split(':');
       const value = setSeconds(
         setMinutes(setHours(searchDate, hour), minute),
